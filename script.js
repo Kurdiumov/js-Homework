@@ -2,8 +2,8 @@ const getRand = (min = 0, max = 10) =>
   Math.floor(Math.random() * (max - min + 1)) + min;
 
 const createArrayWithRandomNumbers = (arrSize = 10) => {
-  var arr = [];
-  for (var i = 0; i < arrSize; i++) {
+  let arr = [];
+  for (let i = 0; i < arrSize; i++) {
     arr[i] = getRand();
   }
   return arr;
