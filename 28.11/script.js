@@ -2,7 +2,7 @@ const getRand = (min = 0, max = 10) =>
   Math.floor(Math.random() * (max - min + 1)) + min;
 
 const createArrayWithRandomNumbers = (arrSize = 10) => {
-  let arr = [];
+  const arr = [];
   for (let i = 0; i < arrSize; i++) {
     arr[i] = getRand();
   }
@@ -10,7 +10,7 @@ const createArrayWithRandomNumbers = (arrSize = 10) => {
 };
 
 function* getOnlyEvenNumbers(arr) {
-  for (let item of arr) {
+  for (const item of arr) {
     if (item % 2 === 0) {
       yield item;
     }
@@ -19,12 +19,12 @@ function* getOnlyEvenNumbers(arr) {
 
 // Wygeneruj 10-elementową tablicę liczb losowych, a następnie wypisz te liczby w konsoli.
 const runTask1 = () => {
-  console.log("Task 1");
+  console.log('Task 1');
   const arr = createArrayWithRandomNumbers(10);
 
-  console.log("Array with random numbers:", arr);
-  console.log("Values:");
-  for (let item of arr) {
+  console.log('Array with random numbers:', arr);
+  console.log('Values:');
+  for (const item of arr) {
     console.log(item);
   }
 };
@@ -33,13 +33,13 @@ const runTask1 = () => {
 // nową funkcję, która przyjmuje nowoutworzoną tablicę jako parametr i zwraca tylko wartości
 // parzyste.
 const runTask2 = () => {
-  console.log("Task 2");
+  console.log('Task 2');
 
   const arr = createArrayWithRandomNumbers(10);
-  console.log("Original arr", arr);
+  console.log('Original arr', arr);
 
   const evenOnlyArr = [...getOnlyEvenNumbers(arr)];
-  console.log("Array with only even values:", evenOnlyArr);
+  console.log('Array with only even values:', evenOnlyArr);
 };
 
 runTask1();
