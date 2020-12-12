@@ -1,0 +1,25 @@
+svg .shop * {
+  transition: stroke 1s, transform 1s;
+  fill: white;
+  stroke: black;
+  stroke-width: 0.5px;
+  transform: translateY(0);
+}
+
+svg .shop .active {
+  fill: white;
+  stroke: gold;
+  stroke-width: 0.5px;
+  transform: translateY(-10px);
+}
+
+svg [id$="Info"] {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.5s, opacity 0.5s linear;
+}
+
+svg [id$="Info"].visible {
+  visibility: visible;
+  opacity: 1;
+}
