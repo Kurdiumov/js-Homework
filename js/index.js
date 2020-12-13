@@ -32,5 +32,6 @@ shops.forEach((shop) => {
 
 shopInfos.forEach((shopInfo) => {
   const shopInfoCloseBtn = document.querySelectorAll(`#${shopInfo} > text`)[0];
+  shopInfoCloseBtn.classList.add("close-btn");
   shopInfoCloseBtn.addEventListener("click", resetAll);
 });

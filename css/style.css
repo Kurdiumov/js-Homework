@@ -23,3 +23,7 @@ svg [id$="Info"].visible {
   visibility: visible;
   opacity: 1;
 }
+
+.close-btn {
+  cursor: pointer;
+}
