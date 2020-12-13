@@ -1,0 +1,41 @@
+$selected-stroke-color: #fd8900;
+
+@mixin transformShop($stroke-color, $transform) {
+  fill: white;
+  stroke-width: 0.5px;
+  stroke: $stroke-color;
+  transform: $transform;
+}
+
+svg {
+  .shop {
+    :hover {
+      cursor: pointer;
+    }
+
+    * {
+      transition: stroke 1s, transform 1s;
+      @include transformShop(#000, translateY(0));
+    }
+
+    .active {
+      fill: white;
+      @include transformShop($selected-stroke-color, translateY(-10px));
+    }
+  }
+
+  .close-btn {
+    cursor: pointer;
+  }
+
+  [id$="Info"] {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.5s, opacity 0.5s linear;
+  }
+
+  [id$="Info"].visible {
+    visibility: visible;
+    opacity: 1;
+  }
+}

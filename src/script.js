@@ -1,3 +1,5 @@
+import styles from "./style.scss";
+
 const shops = ["CCC", "PepCo", "NeoNet", "MartesSport", "TXM"];
 const shopInfos = shops.map((shop) => shop + "Info");
 
