@@ -8,7 +8,7 @@ svg .shop * {
 
 svg .shop .active {
   fill: white;
-  stroke: gold;
+  stroke: #fd8900;
   stroke-width: 0.5px;
   transform: translateY(-10px);
 }
