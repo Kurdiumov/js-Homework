@@ -6,7 +6,8 @@ module.exports = {
   entry: "./src/script.js",
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "bundle.js"
+    filename: "bundle.js",
+    publicPath: "/js-homework/"
   },
   devServer: {
     contentBase: path.join(__dirname, "dist"),
